@@ -1,1 +1,65 @@
+body{
+margin:0;
+font-family:'Montserrat',sans-serif;
+background:linear-gradient(#ffeef5,#f6f9ff);
+text-align:center;
+}
 
+section{
+display:none;
+min-height:100vh;
+padding:40px;
+}
+
+.active{
+display:block;
+}
+
+.hero h1{
+font-family:'Dancing Script',cursive;
+font-size:80px;
+color:#ff5ca8;
+margin-top:60px;
+}
+
+.hero p{
+font-size:22px;
+}
+
+.avatar{
+width:140px;
+height:140px;
+border-radius:50%;
+object-fit:cover;
+margin:20px;
+cursor:pointer;
+transition:.4s;
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.avatar:hover{
+transform:scale(1.1);
+}
+
+.bigPhoto{
+width:300px;
+border-radius:20px;
+margin-top:40px;
+}
+
+.message{
+max-width:700px;
+margin:30px auto;
+font-size:20px;
+line-height:1.6;
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:10px;
+background:#ff5ca8;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
