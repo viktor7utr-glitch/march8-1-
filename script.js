@@ -1,5 +1,6 @@
 const card = document.getElementById("card");
 const home = document.getElementById("home");
+const player = document.getElementById("player");
 
 const messages = {
 1:"Поздравление №1",
@@ -8,25 +9,41 @@ const messages = {
 4:"Поздравление №4"
 };
 
-function openCard(id){
+// музыка главной страницы
+function playMainMusic(){
+    player.src = "music/main.mp3";
+    player.play().catch(()=>{});
+}
 
-document.getElementById("mainMusic").pause();
+// открыть поздравление
+function openCard(id){
 
 home.classList.remove("active");
 card.classList.add("active");
+
+// меняем музыку
+player.src = `music/guy${id}.mp3`;
+player.currentTime = 0;
+player.play();
 
 card.innerHTML = `
 <img src="images/guy${id}.jpg" class="bigPhoto">
 <div class="message">${messages[id]}</div>
 <button onclick="goHome()">Назад</button>
-<audio autoplay loop>
-<source src="music/guy${id}.mp3">
-</audio>
 `;
 }
 
+// вернуться назад
 function goHome(){
+
 card.classList.remove("active");
 home.classList.add("active");
-document.getElementById("mainMusic").play();
+
+playMainMusic();
 }
+
+// запуск музыки после первого клика пользователя
+document.body.addEventListener("click", function startMusic(){
+    playMainMusic();
+    document.body.removeEventListener("click", startMusic);
+});
