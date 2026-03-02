@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>С 8 Марта 🌸</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section id="home" class="active">
+
+<div class="hero">
+<h1>С 8 Марта 🌷</h1>
+<p>Дорогие коллеги, это поздравление — для вас</p>
+</div>
+
+<div class="guys">
+<img src="images/guy1.jpg" class="avatar" onclick="openCard(1)">
+<img src="images/guy2.jpg" class="avatar" onclick="openCard(2)">
+<img src="images/guy3.jpg" class="avatar" onclick="openCard(3)">
+<img src="images/guy4.jpg" class="avatar" onclick="openCard(4)">
+</div>
+
+<audio id="mainMusic" loop>
+<source src="music/main.mp3">
+</audio>
+
+</section>
+
+<section id="card"></section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
